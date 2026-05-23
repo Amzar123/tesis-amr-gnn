@@ -1,0 +1,4 @@
+ticker_and_date,daily_price_change,monthly_avg_price_change,monthly_vol_change
+AMEX-FSP_2010-02-24,0.012,-0.005,0.031
+AMEX-FSP_2010-05-05,-0.008,0.011,-0.021
+AMEX-FSP_2010-08-04,0.021,0.003,0.015

@@ -6,3 +6,5 @@ venv/
 punkt-truly-all-amrs/
 
 punkt-truly-all-amrs.tar
+
+.claude/
