@@ -1,0 +1,10 @@
+python new-GATv2-4-layers-no-hist-blow-up-dim-from-768-pyg.py \
+  tech-earnings-calls \
+  daily_price_change \
+  no-hist \
+  1e-4 \
+  5 \
+  A \
+  0 \
+  5 \
+  4
