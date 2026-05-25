@@ -19,7 +19,7 @@ try:
     os.mkdir('tracking-files')
     os.mkdir('mse-results')
     os.mkdir('best-valid-losses')
-    os.mkdir('saved-model-weights')
+    os.mkdir('../saved-model-weights')
     os.mkdir('training-logs')
 except OSError as error:
     print(error)
@@ -283,8 +283,8 @@ else:
     best_valid_loss = float('inf')
     best_epoch = 0
 
-if (os.path.isfile('saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt')):
-    path = 'saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt'
+if (os.path.isfile('../saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt')):
+    path = '../saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt'
     net.load_state_dict(th.load(path, weights_only=True))
     print(f"[resume] loaded saved weights from {path}")
 
@@ -302,7 +302,7 @@ for epoch in range(start_epoch,end_epoch):
         best_valid_loss = valid_loss
         best_epoch = epoch
         model_to_save = net.module if hasattr(net, 'module') else net
-        th.save(model_to_save.state_dict(), 'saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt')
+        th.save(model_to_save.state_dict(), '../saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt')
         print(f"[epoch {epoch:03d}] ** new best model saved (valid_loss={valid_loss:.9f}) **")
     print("Target: "+bv+" | Layers {:03d}| Heads {:03d}| Epoch {:03d} | Train Loss {:.9f} | Valid Loss {:.9f}| lr {:.9f} | time {:.3f}".format(
             num_of_layers,num_of_attn_heads, epoch, train_loss, valid_loss, learning_rate, end_time-start_time))
@@ -321,7 +321,7 @@ if end_epoch == total_epochs:
     print(f"\n[final] loading best model weights ...")
     model = Net(num_of_attn_heads).to(device)
 
-    path = 'saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt'
+    path = '../saved-model-weights/saved_weights_GATv2-dim-16x_'+str(num_of_layers)+'_layers_'+str(num_of_attn_heads)+'_heads_'+sec+'_'+bv+'_eps'+str(total_epochs)+'_lr='+'{:.1e}'.format(learning_rate)+'_plan-'+sys.argv[6]+'_'+hist+'.pt'
     model.load_state_dict(th.load(path, weights_only=True))
 
     print(f"[final] running validation inference ...")
