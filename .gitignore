@@ -8,3 +8,12 @@ punkt-truly-all-amrs/
 punkt-truly-all-amrs.tar
 
 .claude/
+
+__pycache__/
+
+*.zip
+
+*.amr
+
+*.pt
+
