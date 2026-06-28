@@ -190,19 +190,17 @@ def sentence_to_bert_embeddings(sentence):
         del segments_tensors
         return results
 
-sec_fname = "../punkt-truly-all-amrs/"
-start_id = int(sys.argv[1])
-end_id = int(sys.argv[2])
+sec_fname = "/kaggle/input/datasets/amzar11/idx-amrs-v4/idx-amrs/"
+
 try: 
     os.mkdir('truly-all-results-graphs-hk-finbert-plan-A')
 except OSError as error: 
     print(error)
     
-track_file = open('tracking_file_all-results_construct_hk-finbert_plan_A_'+str(start_id)+"-"+str(end_id)+".txt",'a+')
-with open('truly-all-amrs-file-names.txt','r') as f:
-    filenames = f.readlines()
+track_file = open('tracking_file_all-results_construct_hk-finbert_plan_A.txt','a+')
+filenames = sorted(fn for fn in os.listdir(sec_fname) if fn.endswith('.amr'))
 
-for i in range(start_id, end_id):
+for i in range(len(filenames)):
     filename = filenames[i].strip()
     track_file.write("i = "+str(i)+'\n')
     track_file.write("doc num: "+str(i)+" before train: "+str(int(torch.cuda.memory_reserved()/1024/1024))+' mem reserved\n')
@@ -238,10 +236,15 @@ for i in range(start_id, end_id):
             previous_snt_root = current_snt_root
             current_snt_nodes_dict.clear()
 
-            current_snt = re.sub(r'(?<=\S)[^a-zA-Z0-9\s]','',line[7:])
-            current_snt = re.sub(r'[^a-zA-Z0-9\s](?=\S)','',current_snt)
-            current_snt_embeddings = sentence_to_bert_embeddings(current_snt)[1:-1].cpu()
-            current_snt = current_snt.split()
+            # Tokenisasi harus sama persis dengan yang dipakai alignment ::node.
+            # word_index dihitung dengan split per-spasi (token kosong dipertahankan),
+            # dan tiap run spasi-banyak = TEPAT 1 token kosong. Maka:
+            #  - pakai line[8:] (buang "# ::tok ", JANGAN sisakan spasi pemisah depan)
+            #  - collapse run 2+ spasi jadi tepat 2 spasi (= 1 token kosong)
+            #  - bersihkan tiap token dari non-alfanumerik; token kosong -> 'x'
+            tok_str = re.sub(r'  +', '  ', line[8:].rstrip('\n'))
+            current_snt = [re.sub(r'[^a-zA-Z0-9]', '', tok) or 'x' for tok in tok_str.split(' ')]
+            current_snt_embeddings = sentence_to_bert_embeddings(' '.join(current_snt))[1:-1].cpu()
             assert len(current_snt) == current_snt_embeddings.shape[0]
             
             count += 1
@@ -309,8 +312,14 @@ for i in range(start_id, end_id):
     graph_save_path = "truly-all-results-graphs-hk-finbert-plan-A/" + filename[:-3] + "pt"
     torch.save(g, graph_save_path)
 
+    done_msg = "[{}/{}] DONE {} -> {} ({} nodes)".format(i+1, len(filenames), filename, graph_save_path, num_of_nodes)
+    print(done_msg, flush=True)
+    track_file.write(done_msg+'\n')
+
     track_file.write("doc num: "+str(i)+" after train: "+str(int(torch.cuda.memory_reserved()/1024/1024))+' mem reserved\n')
     track_file.write("doc num: "+str(i)+" after train: "+str(int(torch.cuda.memory_allocated()/1024/1024))+' mem allocated\n')
     track_file.flush()
     
 track_file.close()
+
+# last update nya 200
