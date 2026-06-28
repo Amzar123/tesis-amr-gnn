@@ -1,0 +1,495 @@
+i = 201
+doc num: 201 before train: 0 mem reserved
+doc num: 201 before train: 0 mem allocated
+doc num: 201 after train: 0 mem reserved
+doc num: 201 after train: 0 mem allocated
+i = 202
+doc num: 202 before train: 0 mem reserved
+doc num: 202 before train: 0 mem allocated
+doc num: 202 after train: 0 mem reserved
+doc num: 202 after train: 0 mem allocated
+i = 203
+doc num: 203 before train: 0 mem reserved
+doc num: 203 before train: 0 mem allocated
+doc num: 203 after train: 0 mem reserved
+doc num: 203 after train: 0 mem allocated
+i = 204
+doc num: 204 before train: 0 mem reserved
+doc num: 204 before train: 0 mem allocated
+doc num: 204 after train: 0 mem reserved
+doc num: 204 after train: 0 mem allocated
+i = 205
+doc num: 205 before train: 0 mem reserved
+doc num: 205 before train: 0 mem allocated
+doc num: 205 after train: 0 mem reserved
+doc num: 205 after train: 0 mem allocated
+i = 206
+doc num: 206 before train: 0 mem reserved
+doc num: 206 before train: 0 mem allocated
+doc num: 206 after train: 0 mem reserved
+doc num: 206 after train: 0 mem allocated
+i = 207
+doc num: 207 before train: 0 mem reserved
+doc num: 207 before train: 0 mem allocated
+doc num: 207 after train: 0 mem reserved
+doc num: 207 after train: 0 mem allocated
+i = 208
+doc num: 208 before train: 0 mem reserved
+doc num: 208 before train: 0 mem allocated
+doc num: 208 after train: 0 mem reserved
+doc num: 208 after train: 0 mem allocated
+i = 209
+doc num: 209 before train: 0 mem reserved
+doc num: 209 before train: 0 mem allocated
+doc num: 209 after train: 0 mem reserved
+doc num: 209 after train: 0 mem allocated
+i = 210
+doc num: 210 before train: 0 mem reserved
+doc num: 210 before train: 0 mem allocated
+doc num: 210 after train: 0 mem reserved
+doc num: 210 after train: 0 mem allocated
+i = 211
+doc num: 211 before train: 0 mem reserved
+doc num: 211 before train: 0 mem allocated
+doc num: 211 after train: 0 mem reserved
+doc num: 211 after train: 0 mem allocated
+i = 212
+doc num: 212 before train: 0 mem reserved
+doc num: 212 before train: 0 mem allocated
+doc num: 212 after train: 0 mem reserved
+doc num: 212 after train: 0 mem allocated
+i = 213
+doc num: 213 before train: 0 mem reserved
+doc num: 213 before train: 0 mem allocated
+doc num: 213 after train: 0 mem reserved
+doc num: 213 after train: 0 mem allocated
+i = 214
+doc num: 214 before train: 0 mem reserved
+doc num: 214 before train: 0 mem allocated
+doc num: 214 after train: 0 mem reserved
+doc num: 214 after train: 0 mem allocated
+i = 215
+doc num: 215 before train: 0 mem reserved
+doc num: 215 before train: 0 mem allocated
+doc num: 215 after train: 0 mem reserved
+doc num: 215 after train: 0 mem allocated
+i = 216
+doc num: 216 before train: 0 mem reserved
+doc num: 216 before train: 0 mem allocated
+doc num: 216 after train: 0 mem reserved
+doc num: 216 after train: 0 mem allocated
+i = 217
+doc num: 217 before train: 0 mem reserved
+doc num: 217 before train: 0 mem allocated
+doc num: 217 after train: 0 mem reserved
+doc num: 217 after train: 0 mem allocated
+i = 218
+doc num: 218 before train: 0 mem reserved
+doc num: 218 before train: 0 mem allocated
+doc num: 218 after train: 0 mem reserved
+doc num: 218 after train: 0 mem allocated
+i = 219
+doc num: 219 before train: 0 mem reserved
+doc num: 219 before train: 0 mem allocated
+doc num: 219 after train: 0 mem reserved
+doc num: 219 after train: 0 mem allocated
+i = 220
+doc num: 220 before train: 0 mem reserved
+doc num: 220 before train: 0 mem allocated
+doc num: 220 after train: 0 mem reserved
+doc num: 220 after train: 0 mem allocated
+i = 221
+doc num: 221 before train: 0 mem reserved
+doc num: 221 before train: 0 mem allocated
+doc num: 221 after train: 0 mem reserved
+doc num: 221 after train: 0 mem allocated
+i = 222
+doc num: 222 before train: 0 mem reserved
+doc num: 222 before train: 0 mem allocated
+doc num: 222 after train: 0 mem reserved
+doc num: 222 after train: 0 mem allocated
+i = 223
+doc num: 223 before train: 0 mem reserved
+doc num: 223 before train: 0 mem allocated
+doc num: 223 after train: 0 mem reserved
+doc num: 223 after train: 0 mem allocated
+i = 224
+doc num: 224 before train: 0 mem reserved
+doc num: 224 before train: 0 mem allocated
+doc num: 224 after train: 0 mem reserved
+doc num: 224 after train: 0 mem allocated
+i = 225
+doc num: 225 before train: 0 mem reserved
+doc num: 225 before train: 0 mem allocated
+doc num: 225 after train: 0 mem reserved
+doc num: 225 after train: 0 mem allocated
+i = 226
+doc num: 226 before train: 0 mem reserved
+doc num: 226 before train: 0 mem allocated
+doc num: 226 after train: 0 mem reserved
+doc num: 226 after train: 0 mem allocated
+i = 227
+doc num: 227 before train: 0 mem reserved
+doc num: 227 before train: 0 mem allocated
+doc num: 227 after train: 0 mem reserved
+doc num: 227 after train: 0 mem allocated
+i = 228
+doc num: 228 before train: 0 mem reserved
+doc num: 228 before train: 0 mem allocated
+doc num: 228 after train: 0 mem reserved
+doc num: 228 after train: 0 mem allocated
+i = 229
+doc num: 229 before train: 0 mem reserved
+doc num: 229 before train: 0 mem allocated
+doc num: 229 after train: 0 mem reserved
+doc num: 229 after train: 0 mem allocated
+i = 230
+doc num: 230 before train: 0 mem reserved
+doc num: 230 before train: 0 mem allocated
+doc num: 230 after train: 0 mem reserved
+doc num: 230 after train: 0 mem allocated
+i = 231
+doc num: 231 before train: 0 mem reserved
+doc num: 231 before train: 0 mem allocated
+doc num: 231 after train: 0 mem reserved
+doc num: 231 after train: 0 mem allocated
+i = 232
+doc num: 232 before train: 0 mem reserved
+doc num: 232 before train: 0 mem allocated
+doc num: 232 after train: 0 mem reserved
+doc num: 232 after train: 0 mem allocated
+i = 233
+doc num: 233 before train: 0 mem reserved
+doc num: 233 before train: 0 mem allocated
+doc num: 233 after train: 0 mem reserved
+doc num: 233 after train: 0 mem allocated
+i = 234
+doc num: 234 before train: 0 mem reserved
+doc num: 234 before train: 0 mem allocated
+doc num: 234 after train: 0 mem reserved
+doc num: 234 after train: 0 mem allocated
+i = 235
+doc num: 235 before train: 0 mem reserved
+doc num: 235 before train: 0 mem allocated
+doc num: 235 after train: 0 mem reserved
+doc num: 235 after train: 0 mem allocated
+i = 236
+doc num: 236 before train: 0 mem reserved
+doc num: 236 before train: 0 mem allocated
+doc num: 236 after train: 0 mem reserved
+doc num: 236 after train: 0 mem allocated
+i = 237
+doc num: 237 before train: 0 mem reserved
+doc num: 237 before train: 0 mem allocated
+doc num: 237 after train: 0 mem reserved
+doc num: 237 after train: 0 mem allocated
+i = 238
+doc num: 238 before train: 0 mem reserved
+doc num: 238 before train: 0 mem allocated
+doc num: 238 after train: 0 mem reserved
+doc num: 238 after train: 0 mem allocated
+i = 239
+doc num: 239 before train: 0 mem reserved
+doc num: 239 before train: 0 mem allocated
+doc num: 239 after train: 0 mem reserved
+doc num: 239 after train: 0 mem allocated
+i = 240
+doc num: 240 before train: 0 mem reserved
+doc num: 240 before train: 0 mem allocated
+doc num: 240 after train: 0 mem reserved
+doc num: 240 after train: 0 mem allocated
+i = 241
+doc num: 241 before train: 0 mem reserved
+doc num: 241 before train: 0 mem allocated
+doc num: 241 after train: 0 mem reserved
+doc num: 241 after train: 0 mem allocated
+i = 242
+doc num: 242 before train: 0 mem reserved
+doc num: 242 before train: 0 mem allocated
+doc num: 242 after train: 0 mem reserved
+doc num: 242 after train: 0 mem allocated
+i = 243
+doc num: 243 before train: 0 mem reserved
+doc num: 243 before train: 0 mem allocated
+doc num: 243 after train: 0 mem reserved
+doc num: 243 after train: 0 mem allocated
+i = 244
+doc num: 244 before train: 0 mem reserved
+doc num: 244 before train: 0 mem allocated
+doc num: 244 after train: 0 mem reserved
+doc num: 244 after train: 0 mem allocated
+i = 245
+doc num: 245 before train: 0 mem reserved
+doc num: 245 before train: 0 mem allocated
+doc num: 245 after train: 0 mem reserved
+doc num: 245 after train: 0 mem allocated
+i = 246
+doc num: 246 before train: 0 mem reserved
+doc num: 246 before train: 0 mem allocated
+doc num: 246 after train: 0 mem reserved
+doc num: 246 after train: 0 mem allocated
+i = 247
+doc num: 247 before train: 0 mem reserved
+doc num: 247 before train: 0 mem allocated
+doc num: 247 after train: 0 mem reserved
+doc num: 247 after train: 0 mem allocated
+i = 248
+doc num: 248 before train: 0 mem reserved
+doc num: 248 before train: 0 mem allocated
+doc num: 248 after train: 0 mem reserved
+doc num: 248 after train: 0 mem allocated
+i = 249
+doc num: 249 before train: 0 mem reserved
+doc num: 249 before train: 0 mem allocated
+doc num: 249 after train: 0 mem reserved
+doc num: 249 after train: 0 mem allocated
+i = 250
+doc num: 250 before train: 0 mem reserved
+doc num: 250 before train: 0 mem allocated
+doc num: 250 after train: 0 mem reserved
+doc num: 250 after train: 0 mem allocated
+i = 251
+doc num: 251 before train: 0 mem reserved
+doc num: 251 before train: 0 mem allocated
+doc num: 251 after train: 0 mem reserved
+doc num: 251 after train: 0 mem allocated
+i = 252
+doc num: 252 before train: 0 mem reserved
+doc num: 252 before train: 0 mem allocated
+doc num: 252 after train: 0 mem reserved
+doc num: 252 after train: 0 mem allocated
+i = 253
+doc num: 253 before train: 0 mem reserved
+doc num: 253 before train: 0 mem allocated
+doc num: 253 after train: 0 mem reserved
+doc num: 253 after train: 0 mem allocated
+i = 254
+doc num: 254 before train: 0 mem reserved
+doc num: 254 before train: 0 mem allocated
+doc num: 254 after train: 0 mem reserved
+doc num: 254 after train: 0 mem allocated
+i = 255
+doc num: 255 before train: 0 mem reserved
+doc num: 255 before train: 0 mem allocated
+doc num: 255 after train: 0 mem reserved
+doc num: 255 after train: 0 mem allocated
+i = 256
+doc num: 256 before train: 0 mem reserved
+doc num: 256 before train: 0 mem allocated
+doc num: 256 after train: 0 mem reserved
+doc num: 256 after train: 0 mem allocated
+i = 257
+doc num: 257 before train: 0 mem reserved
+doc num: 257 before train: 0 mem allocated
+doc num: 257 after train: 0 mem reserved
+doc num: 257 after train: 0 mem allocated
+i = 258
+doc num: 258 before train: 0 mem reserved
+doc num: 258 before train: 0 mem allocated
+doc num: 258 after train: 0 mem reserved
+doc num: 258 after train: 0 mem allocated
+i = 259
+doc num: 259 before train: 0 mem reserved
+doc num: 259 before train: 0 mem allocated
+doc num: 259 after train: 0 mem reserved
+doc num: 259 after train: 0 mem allocated
+i = 260
+doc num: 260 before train: 0 mem reserved
+doc num: 260 before train: 0 mem allocated
+doc num: 260 after train: 0 mem reserved
+doc num: 260 after train: 0 mem allocated
+i = 261
+doc num: 261 before train: 0 mem reserved
+doc num: 261 before train: 0 mem allocated
+doc num: 261 after train: 0 mem reserved
+doc num: 261 after train: 0 mem allocated
+i = 262
+doc num: 262 before train: 0 mem reserved
+doc num: 262 before train: 0 mem allocated
+doc num: 262 after train: 0 mem reserved
+doc num: 262 after train: 0 mem allocated
+i = 263
+doc num: 263 before train: 0 mem reserved
+doc num: 263 before train: 0 mem allocated
+doc num: 263 after train: 0 mem reserved
+doc num: 263 after train: 0 mem allocated
+i = 264
+doc num: 264 before train: 0 mem reserved
+doc num: 264 before train: 0 mem allocated
+doc num: 264 after train: 0 mem reserved
+doc num: 264 after train: 0 mem allocated
+i = 265
+doc num: 265 before train: 0 mem reserved
+doc num: 265 before train: 0 mem allocated
+doc num: 265 after train: 0 mem reserved
+doc num: 265 after train: 0 mem allocated
+i = 266
+doc num: 266 before train: 0 mem reserved
+doc num: 266 before train: 0 mem allocated
+doc num: 266 after train: 0 mem reserved
+doc num: 266 after train: 0 mem allocated
+i = 267
+doc num: 267 before train: 0 mem reserved
+doc num: 267 before train: 0 mem allocated
+doc num: 267 after train: 0 mem reserved
+doc num: 267 after train: 0 mem allocated
+i = 268
+doc num: 268 before train: 0 mem reserved
+doc num: 268 before train: 0 mem allocated
+doc num: 268 after train: 0 mem reserved
+doc num: 268 after train: 0 mem allocated
+i = 269
+doc num: 269 before train: 0 mem reserved
+doc num: 269 before train: 0 mem allocated
+doc num: 269 after train: 0 mem reserved
+doc num: 269 after train: 0 mem allocated
+i = 270
+doc num: 270 before train: 0 mem reserved
+doc num: 270 before train: 0 mem allocated
+doc num: 270 after train: 0 mem reserved
+doc num: 270 after train: 0 mem allocated
+i = 271
+doc num: 271 before train: 0 mem reserved
+doc num: 271 before train: 0 mem allocated
+doc num: 271 after train: 0 mem reserved
+doc num: 271 after train: 0 mem allocated
+i = 272
+doc num: 272 before train: 0 mem reserved
+doc num: 272 before train: 0 mem allocated
+doc num: 272 after train: 0 mem reserved
+doc num: 272 after train: 0 mem allocated
+i = 273
+doc num: 273 before train: 0 mem reserved
+doc num: 273 before train: 0 mem allocated
+doc num: 273 after train: 0 mem reserved
+doc num: 273 after train: 0 mem allocated
+i = 274
+doc num: 274 before train: 0 mem reserved
+doc num: 274 before train: 0 mem allocated
+doc num: 274 after train: 0 mem reserved
+doc num: 274 after train: 0 mem allocated
+i = 275
+doc num: 275 before train: 0 mem reserved
+doc num: 275 before train: 0 mem allocated
+doc num: 275 after train: 0 mem reserved
+doc num: 275 after train: 0 mem allocated
+i = 276
+doc num: 276 before train: 0 mem reserved
+doc num: 276 before train: 0 mem allocated
+doc num: 276 after train: 0 mem reserved
+doc num: 276 after train: 0 mem allocated
+i = 277
+doc num: 277 before train: 0 mem reserved
+doc num: 277 before train: 0 mem allocated
+doc num: 277 after train: 0 mem reserved
+doc num: 277 after train: 0 mem allocated
+i = 278
+doc num: 278 before train: 0 mem reserved
+doc num: 278 before train: 0 mem allocated
+doc num: 278 after train: 0 mem reserved
+doc num: 278 after train: 0 mem allocated
+i = 279
+doc num: 279 before train: 0 mem reserved
+doc num: 279 before train: 0 mem allocated
+doc num: 279 after train: 0 mem reserved
+doc num: 279 after train: 0 mem allocated
+i = 280
+doc num: 280 before train: 0 mem reserved
+doc num: 280 before train: 0 mem allocated
+doc num: 280 after train: 0 mem reserved
+doc num: 280 after train: 0 mem allocated
+i = 281
+doc num: 281 before train: 0 mem reserved
+doc num: 281 before train: 0 mem allocated
+doc num: 281 after train: 0 mem reserved
+doc num: 281 after train: 0 mem allocated
+i = 282
+doc num: 282 before train: 0 mem reserved
+doc num: 282 before train: 0 mem allocated
+doc num: 282 after train: 0 mem reserved
+doc num: 282 after train: 0 mem allocated
+i = 283
+doc num: 283 before train: 0 mem reserved
+doc num: 283 before train: 0 mem allocated
+doc num: 283 after train: 0 mem reserved
+doc num: 283 after train: 0 mem allocated
+i = 284
+doc num: 284 before train: 0 mem reserved
+doc num: 284 before train: 0 mem allocated
+doc num: 284 after train: 0 mem reserved
+doc num: 284 after train: 0 mem allocated
+i = 285
+doc num: 285 before train: 0 mem reserved
+doc num: 285 before train: 0 mem allocated
+doc num: 285 after train: 0 mem reserved
+doc num: 285 after train: 0 mem allocated
+i = 286
+doc num: 286 before train: 0 mem reserved
+doc num: 286 before train: 0 mem allocated
+doc num: 286 after train: 0 mem reserved
+doc num: 286 after train: 0 mem allocated
+i = 287
+doc num: 287 before train: 0 mem reserved
+doc num: 287 before train: 0 mem allocated
+doc num: 287 after train: 0 mem reserved
+doc num: 287 after train: 0 mem allocated
+i = 288
+doc num: 288 before train: 0 mem reserved
+doc num: 288 before train: 0 mem allocated
+doc num: 288 after train: 0 mem reserved
+doc num: 288 after train: 0 mem allocated
+i = 289
+doc num: 289 before train: 0 mem reserved
+doc num: 289 before train: 0 mem allocated
+doc num: 289 after train: 0 mem reserved
+doc num: 289 after train: 0 mem allocated
+i = 290
+doc num: 290 before train: 0 mem reserved
+doc num: 290 before train: 0 mem allocated
+doc num: 290 after train: 0 mem reserved
+doc num: 290 after train: 0 mem allocated
+i = 291
+doc num: 291 before train: 0 mem reserved
+doc num: 291 before train: 0 mem allocated
+doc num: 291 after train: 0 mem reserved
+doc num: 291 after train: 0 mem allocated
+i = 292
+doc num: 292 before train: 0 mem reserved
+doc num: 292 before train: 0 mem allocated
+doc num: 292 after train: 0 mem reserved
+doc num: 292 after train: 0 mem allocated
+i = 293
+doc num: 293 before train: 0 mem reserved
+doc num: 293 before train: 0 mem allocated
+doc num: 293 after train: 0 mem reserved
+doc num: 293 after train: 0 mem allocated
+i = 294
+doc num: 294 before train: 0 mem reserved
+doc num: 294 before train: 0 mem allocated
+doc num: 294 after train: 0 mem reserved
+doc num: 294 after train: 0 mem allocated
+i = 295
+doc num: 295 before train: 0 mem reserved
+doc num: 295 before train: 0 mem allocated
+doc num: 295 after train: 0 mem reserved
+doc num: 295 after train: 0 mem allocated
+i = 296
+doc num: 296 before train: 0 mem reserved
+doc num: 296 before train: 0 mem allocated
+doc num: 296 after train: 0 mem reserved
+doc num: 296 after train: 0 mem allocated
+i = 297
+doc num: 297 before train: 0 mem reserved
+doc num: 297 before train: 0 mem allocated
+doc num: 297 after train: 0 mem reserved
+doc num: 297 after train: 0 mem allocated
+i = 298
+doc num: 298 before train: 0 mem reserved
+doc num: 298 before train: 0 mem allocated
+doc num: 298 after train: 0 mem reserved
+doc num: 298 after train: 0 mem allocated
+i = 299
+doc num: 299 before train: 0 mem reserved
+doc num: 299 before train: 0 mem allocated
+doc num: 299 after train: 0 mem reserved
+doc num: 299 after train: 0 mem allocated
