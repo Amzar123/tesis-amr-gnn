@@ -26,7 +26,17 @@ RESUME (lanjut tanpa ngulang):
     OUT_DIR. Kalau ada -> dilewati. Penulisan file pakai tulis-ke-.tmp lalu
     rename atomik, jadi file yang ada PASTI lengkap (tidak ada sisa setengah
     jadi kalau proses ke-kill di tengah jalan). Aman dijalankan ulang kapan pun.
+
+FILTER DOKUMEN (hanya proses yang sudah ditetapkan untuk train/test):
+    SELECTED_DOCS_CSVS menunjuk ke CSV hasil select-balanced-from-master.py
+    (kolom `ticker_and_date`, mis. balanced-selection-trainvalid.csv +
+    balanced-selection-test.csv). Kalau di-set, HANYA file .txt yang basename-nya
+    (tanpa .txt) cocok dengan salah satu key di CSV itu yang dikonversi ke .amr
+    -- ribuan .txt lain di RAW_DIR yang bukan bagian dari 60 dokumen terpilih
+    dilewati begitu saja. Set ke [] atau None untuk proses SEMUA .txt yang
+    ketemu (perilaku lama, tanpa filter).
 """
+import csv
 import os
 import subprocess
 import multiprocessing as mp
@@ -51,6 +61,14 @@ MODEL_DIR = "/kaggle/input/models/amzar11/amrlib-model/other/default/1/model_par
 # Folder berisi .amr dari run sebelumnya untuk di-seed ke OUT_DIR (RESUME lintas
 # versi). "AUTO" -> cari folder bernama idx-amrs di /kaggle/input. "" = nonaktif.
 SEED_DIR = "AUTO"
+# CSV berisi kolom `ticker_and_date` yang menandai dokumen yang SUDAH DITETAPKAN
+# untuk train/valid & test (hasil select-balanced-from-master.py). Path relatif
+# dicari di folder script ini dulu, lalu di /kaggle/input (rekursif, cocokkan
+# nama file). [] / None -> nonaktif, proses semua .txt yang ketemu di RAW_DIR.
+SELECTED_DOCS_CSVS = [
+    "balanced-selection-trainvalid.csv",
+    "balanced-selection-test.csv",
+]
 USE_GPU  = True
 # Daftar id GPU yang dipakai (1 proses per GPU). None = auto-deteksi semua GPU.
 # Untuk 2x T4 Kaggle ini jadi [0, 1]. Set [0] kalau mau 1 GPU saja.
@@ -101,9 +119,43 @@ def resolve_model_dir():
     return ""
 
 
-def seed_existing_amrs():
+def resolve_selected_keys():
+    """Baca SELECTED_DOCS_CSVS (kolom `ticker_and_date`) -> set nama dokumen yang
+    boleh diproses. Path dicari relatif ke direktori kerja saat ini dulu, lalu
+    (kalau tidak ketemu) direkursif di /kaggle/input berdasarkan nama file.
+    Return None kalau SELECTED_DOCS_CSVS kosong -> artinya filter nonaktif
+    (proses semua). Aman dipanggil dari script biasa maupun sel notebook
+    Jupyter/Kaggle (`__file__` tidak selalu ada di notebook)."""
+    if not SELECTED_DOCS_CSVS:
+        return None
+    import glob
+    try:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+    except NameError:
+        script_dir = os.getcwd()
+    keys = set()
+    for name in SELECTED_DOCS_CSVS:
+        path = name
+        if not os.path.isfile(path):
+            cand = os.path.join(script_dir, name)
+            path = cand if os.path.isfile(cand) else None
+        if path is None:
+            hits = glob.glob(f"/kaggle/input/**/{os.path.basename(name)}", recursive=True)
+            path = hits[0] if hits else None
+        if path is None:
+            print(f"[warn] SELECTED_DOCS_CSVS: {name} tidak ketemu, dilewati", flush=True)
+            continue
+        with open(path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                keys.add(row["ticker_and_date"])
+        print(f"[setup] {len(keys)} key kumulatif setelah baca {path}", flush=True)
+    return keys
+
+
+def seed_existing_amrs(selected_keys=None):
     """Copy .amr dari run sebelumnya (SEED_DIR / auto di /kaggle/input) ke OUT_DIR.
-    Hanya menyalin yang belum ada. Untuk RESUME lintas versi notebook."""
+    Hanya menyalin yang belum ada, dan (kalau selected_keys diisi) hanya yang
+    basename-nya termasuk dokumen terpilih. Untuk RESUME lintas versi notebook."""
     if not SEED_DIR:
         return 0
     import glob
@@ -115,6 +167,9 @@ def seed_existing_amrs():
         srcs = glob.glob(os.path.join(SEED_DIR, "*.amr"))
     n = 0
     for src in srcs:
+        base = os.path.splitext(os.path.basename(src))[0]
+        if selected_keys is not None and base not in selected_keys:
+            continue
         dst = os.path.join(OUT_DIR, os.path.basename(src))
         if not os.path.exists(dst):
             shutil.copy2(src, dst)
@@ -262,8 +317,17 @@ def worker(gpu_id, files, tag):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
+    # --- dokumen yang sudah ditetapkan untuk train/test (None = semua boleh) ---
+    selected_keys = resolve_selected_keys()
+    if selected_keys is not None:
+        print(f"[setup] filter aktif: {len(selected_keys)} dokumen ditetapkan utk train/test",
+              flush=True)
+    else:
+        print("[setup] filter nonaktif (SELECTED_DOCS_CSVS kosong) -> proses semua .txt",
+              flush=True)
+
     # --- seed .amr lama (resume lintas versi notebook) ---
-    seed_existing_amrs()
+    seed_existing_amrs(selected_keys)
 
     # --- tentukan daftar GPU (pakai nvidia-smi, JANGAN import torch di induk
     #     supaya CUDA belum diinisialisasi -> aman untuk fork) ---
@@ -282,11 +346,26 @@ def main():
 
     # --- daftar dokumen (path lengkap, rekursif) ---
     files = resolve_raw_txt()
+
+    # --- buang .txt yang bukan bagian dari dokumen terpilih ---
+    if selected_keys is not None:
+        _before = len(files)
+        files = [p for p in files
+                 if os.path.splitext(os.path.basename(p))[0] in selected_keys]
+        found_keys = {os.path.splitext(os.path.basename(p))[0] for p in files}
+        missing = selected_keys - found_keys
+        print(f"[setup] filter dokumen terpilih: {len(files)}/{_before} file .txt cocok "
+              f"({_before - len(files)} bukan bagian dari train/test, dilewati)", flush=True)
+        if missing:
+            print(f"[warn] {len(missing)} dokumen terpilih TIDAK ketemu .txt-nya di RAW_DIR: "
+                  f"{sorted(missing)}", flush=True)
+
     if LIMIT_DOCS:
         files = files[:LIMIT_DOCS]
     total = len(files)
     if total == 0:
-        print("[error] tidak menemukan file .txt mentah. Cek RAW_DIR.", flush=True)
+        print("[error] tidak menemukan file .txt mentah (setelah filter). Cek RAW_DIR / "
+              "SELECTED_DOCS_CSVS.", flush=True)
         return
     print(f"[setup] sumber .txt: {os.path.dirname(files[0])}", flush=True)
 
