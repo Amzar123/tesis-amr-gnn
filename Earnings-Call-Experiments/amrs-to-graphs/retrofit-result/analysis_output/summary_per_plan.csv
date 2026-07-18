@@ -1,0 +1,6 @@
+plan,n_files,avg_nodes,avg_relations,median_relations,total_relations,avg_density,std_density,desc
+A,60,23901.7,26170.68,23622.5,1570241,1.1,0.01,doc_cls<->root (baseline)
+B,60,23901.7,27751.47,25063.5,1665088,1.16,0.01,A + rantai root antar-kalimat
+C,60,25483.48,51652.17,46685.0,3099130,2.03,0.01,"+snt_cls, snt_cls<->semua node kalimat sblm"
+D,60,25483.48,75552.87,68306.5,4533172,2.97,0.01,C + doc_cls<->tiap node kalimat sblm
+E,60,23901.7,48489.6,43799.5,2909376,2.03,0.01,doc_cls<->tiap node kalimat sblm (tanpa snt_cls)
