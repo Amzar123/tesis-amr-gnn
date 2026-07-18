@@ -27,3 +27,9 @@ Earnings-Call-Experiments/amrs-to-graphs/truly-all-results-graphs-*/
 
 graph-visualizer/backend/uploads/
 
+.DS_Store
+
+.next/
+
+*.tsbuildinfo
+
