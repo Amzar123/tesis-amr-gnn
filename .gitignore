@@ -17,3 +17,13 @@ __pycache__/
 
 *.pt
 
+node_modules/
+
+implementasi-tesis/Raw_English_2159/
+
+Earnings-Call-Experiments/GATv2/tracking-files/
+
+Earnings-Call-Experiments/amrs-to-graphs/truly-all-results-graphs-*/
+
+graph-visualizer/backend/uploads/
+
